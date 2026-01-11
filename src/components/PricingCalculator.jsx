@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 
 export default function PricingCalculator() {
-  const now = typeof window !== 'undefined' ? performance.now().toFixed(0) : 'BUILD';
-
   console.log(
-    `[${now}ms] 🥑 PricingCalculator render tại:`,
+    `[PricingCalculator] 🥑 PricingCalculator render tại:`,
     typeof window !== "undefined" ? "🌐 BROWSER" : "🖥️  SERVER"
   );
 
@@ -13,17 +11,15 @@ export default function PricingCalculator() {
   const pricePerUser = 5;
   const total = users * pricePerUser;
 
-  console.log(`[${now}ms] 🥑 State:`, {
+  console.log(`[PricingCalculator] 🥑 State:`, {
     hydrated,
     users,
     total,
   });
 
   useEffect(() => {
-    const hydrateTime = performance.now().toFixed(0);
-    console.log(`[${hydrateTime}ms] ⚡ useEffect chạy - HYDRATING!`);
     setHydrated(true);
-    console.log(`[${hydrateTime}ms] ✅ Hydration hoàn tất!`);
+    console.log(`[PricingCalculator] ✅ Hydration hoàn tất!`);
   }, []);
 
   return (

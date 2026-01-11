@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import PricingCalculator from '../components/PricingCalculator.jsx';
 import LiveClock from '../components/LiveClock.jsx';
+import IdleDemo from '../components/IdleDemo.jsx';
+import MediaDemo from '../components/MediaDemo.jsx';
+import VisibleDemo from '../components/VisibleDemo.jsx';
 ---
 
 <Layout>
@@ -14,12 +17,20 @@ import LiveClock from '../components/LiveClock.jsx';
       <p class="text-gray-600 mb-6">
         Static HTML + React Islands
       </p>
-      <a
-        href="/about"
-        class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
-      >
-        📁 File-based Routing →
-      </a>
+      <div class="flex gap-4 justify-center">
+        <a
+          href="/about"
+          class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
+        >
+          📁 File-based Routing →
+        </a>
+        <a
+          href="/blog/blog123"
+          class="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-sm"
+        >
+          📝 Markdown Demo →
+        </a>
+      </div>
     </section>
 
     <p>---------------------------------------------------------------------------------------------------------------</p>
@@ -39,6 +50,52 @@ import LiveClock from '../components/LiveClock.jsx';
       <div>
           <h3>2. Demo client:only directive</h3>
           <LiveClock client:only="react" />
+      </div>
+
+      <p>- - - - - - - - - - - - - - - - </p>
+
+      <div>
+          <h3>3. Demo client:idle directive</h3>
+          <IdleDemo client:idle />
+      </div>
+
+      <p>- - - - - - - - - - - - - - - - </p>
+
+      <div>
+          <h3>4. Demo client:media directive</h3>
+          <MediaDemo client:media="(max-width: 768px)" />
+      </div>
+
+      <p>- - - - - - - - - - - - - - - - </p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      <div>
+          <h3>5. Demo client:visible directive</h3>
+          <VisibleDemo client:visible />
       </div>
     </section>
 
