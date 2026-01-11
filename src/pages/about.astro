@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <div class="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 py-16 px-4">
+    <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+
+      <h1 class="text-4xl font-bold mb-6 text-purple-600">
+        About Page
+      </h1>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
+        <h2 class="font-bold mb-3">📁 File-based Routing</h2>
+        <div class="text-sm text-gray-700 space-y-2">
+          <div><code class="bg-white px-2 py-1 rounded">pages/index.astro</code> → <code>/</code></div>
+          <div><code class="bg-white px-2 py-1 rounded">pages/about.astro</code> → <code>/about</code></div>
+          <div><code class="bg-white px-2 py-1 rounded">pages/blog/post.astro</code> → <code>/blog/post</code></div>
+        </div>
+      </div>
+
+      <p class="text-gray-600 mb-6 text-sm">
+        Không cần config route, chỉ cần tạo file trong <code class="bg-gray-100 px-2 py-1 rounded">pages/</code>
+      </p>
+
+      <a
+        href="/"
+        class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition"
+      >
+        ← Trang chủ
+      </a>
+    </div>
+  </div>
+</Layout>

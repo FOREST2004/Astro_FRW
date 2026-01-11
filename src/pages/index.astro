@@ -5,112 +5,72 @@ import LiveClock from '../components/LiveClock.jsx';
 ---
 
 <Layout>
-  <div class="font-sans text-gray-800 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+  <div class="font-sans text-gray-800 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-12">
 
-    <!-- Hero Section - Static Content -->
-    <section class="my-12 text-center py-16">
-      <h1 class="text-4xl font-bold mb-6 text-gray-800">
-        Island Architecture Demo
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4 text-gray-800">
+        Astro Islands Demo
       </h1>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
-        Trang này minh họa <strong>Astro Islands</strong> - phần lớn nội dung là static HTML,
-        chỉ có các thành phần tương tác được tải khi cần thiết.
+      <p class="text-gray-600 mb-6">
+        Static HTML + React Islands
       </p>
+      <a
+        href="/about"
+        class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
+      >
+        📁 File-based Routing →
+      </a>
     </section>
 
-    <!-- Static vs Dynamic Comparison -->
-    <section class="max-w-6xl mx-auto px-4 mb-12">
-      <div class="grid gap-6 md:grid-cols-2">
-        <!-- Static Content Card -->
-        <div class="bg-white rounded-xl shadow-lg p-8">
-          <h2 class="text-2xl font-bold mb-4 text-green-600">Static Content</h2>
-          <p class="text-gray-600 mb-4">
-            Phần lớn trang này được render thành HTML tĩnh tại thời điểm build,
-            giúp tải nhanh và tốt cho SEO.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li>Hero section</li>
-            <li>Features list</li>
-            <li>Testimonials</li>
-            <li>Footer</li>
-          </ul>
-        </div>
+    <p>---------------------------------------------------------------------------------------------------------------</p>
 
-        <!-- Dynamic Islands Card -->
-        <div class="bg-white rounded-xl shadow-lg p-8">
-          <h2 class="text-2xl font-bold mb-4 text-blue-600">Dynamic Islands</h2>
-          <p class="text-gray-600 mb-4">
-            Các component tương tác bên dưới được load như Astro Islands
-            và hydrate trên client.
-          </p>
-          <ul class="list-disc list-inside text-gray-600 space-y-2">
-            <li><strong>LiveClock</strong> - client:only="react"</li>
-            <li><strong>PricingCalculator</strong> - client:load</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Dynamic Islands Section -->
-    <section class="max-w-6xl mx-auto px-4 mb-12">
-      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">
-        Interactive Components
-      </h2>
+    <section class="max-w-4xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-center">Interactive Components</h2>
 
       <div class="grid gap-6 md:grid-cols-2">
-        <!-- LiveClock Island - client:only -->
-        <div class="text-center relative">
+        <div>
           <LiveClock client:only="react" />
-          <p class="text-xs text-gray-500 mt-2">
-            ⚡ Chỉ load trên client (không SSR)
+          <p class="text-xs text-center text-gray-500 mt-2">
+            client:only
           </p>
         </div>
 
-        <!-- PricingCalculator Island - client:load -->
-        <div class="text-center relative">
+        <p>- - - - - - - - - - - - - - - - </p>
+
+        <div>
           <PricingCalculator client:load />
-          <p class="text-xs text-gray-500 mt-2">
-            ⚡ Load và hydrate ngay khi trang tải
+          <p class="text-xs text-center text-gray-500 mt-2">
+            client:load (hydrate ngay khi load)
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Features Section - Static -->
-    <section class="max-w-6xl mx-auto px-4 mb-12">
-      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">
-        Tại sao dùng Island Architecture?
-      </h2>
+    <p>---------------------------------------------------------------------------------------------------------------</p>
+
+    <section class="max-w-4xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-center">Lợi ích</h2>
       <div class="grid gap-6 md:grid-cols-3">
-        <div class="bg-white rounded-xl shadow-md p-6">
-          <div class="text-4xl mb-4">🚀</div>
-          <h3 class="font-bold text-xl mb-2">Hiệu suất cao</h3>
-          <p class="text-gray-600">
-            Chỉ load JavaScript cho các component cần tương tác,
-            phần còn lại là HTML tĩnh.
-          </p>
+        <div class="bg-white rounded-xl shadow-md p-6 text-center">
+          <div class="text-4xl mb-2">🚀</div>
+          <h3 class="font-bold mb-2">Performance</h3>
+          <p class="text-sm text-gray-600">Ít JS hơn</p>
         </div>
-        <div class="bg-white rounded-xl shadow-md p-6">
-          <div class="text-4xl mb-4">🎯</div>
-          <h3 class="font-bold text-xl mb-2">SEO tốt hơn</h3>
-          <p class="text-gray-600">
-            Nội dung static được render sẵn, dễ dàng cho search engines index.
-          </p>
+        <div class="bg-white rounded-xl shadow-md p-6 text-center">
+          <div class="text-4xl mb-2">🎯</div>
+          <h3 class="font-bold mb-2">SEO</h3>
+          <p class="text-sm text-gray-600">HTML có sẵn</p>
         </div>
-        <div class="bg-white rounded-xl shadow-md p-6">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-bold text-xl mb-2">Tải nhanh</h3>
-          <p class="text-gray-600">
-            Giảm thiểu bundle size JavaScript, tăng tốc độ tải trang.
-          </p>
+        <div class="bg-white rounded-xl shadow-md p-6 text-center">
+          <div class="text-4xl mb-2">⚡</div>
+          <h3 class="font-bold mb-2">Fast</h3>
+          <p class="text-sm text-gray-600">Tải nhanh</p>
         </div>
       </div>
     </section>
 
-    <!-- Footer - Static -->
-    <footer class="text-center py-8 text-gray-600">
-      <p class="mb-2">Made with ❤️ using Astro + React + UnoCSS</p>
-      <p class="text-sm">Island Architecture Demo</p>
+    <footer class="text-center py-8 text-gray-500 text-sm">
+      Astro + React Islands
     </footer>
 
   </div>

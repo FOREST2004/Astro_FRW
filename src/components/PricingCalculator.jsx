@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function PricingCalculator() {
   const [hydrated, setHydrated] = useState(false);
@@ -13,14 +13,16 @@ export default function PricingCalculator() {
   return (
     <div className="p-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg">
       <span className="absolute top-4 left-4 bg-blue-500 text-white px-2 py-1 rounded text-xs">
-        Dynamic
+        Dynamic:
       </span>
       {hydrated && (
         <span className="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded text-xs">
           Hydrated ✓
         </span>
       )}
-      <h3 className="text-lg font-semibold mb-4 text-white">Pricing Calculator</h3>
+      <h3 className="text-lg font-semibold mb-4 text-white">
+        Pricing Calculator
+      </h3>
       <div className="mb-4">
         <label className="block mb-2">
           <span className="block mb-2 text-sm opacity-90 text-white">
@@ -37,8 +39,9 @@ export default function PricingCalculator() {
         </label>
       </div>
       <div className="text-center">
-        <p className="text-sm opacity-90 mb-1 text-white">Total cost:</p>
-        <p className="text-3xl font-bold text-white">${total}</p>
+        <p className="text-sm opacity-90 mb-1 text-white">
+          Total cost: <span className="font-bold">${total}</span>
+        </p>
         <p className="text-xs opacity-75 mt-1 text-white">
           ${pricePerUser} per user
         </p>
