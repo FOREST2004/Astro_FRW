@@ -1,17 +1,36 @@
 import { useEffect, useState } from "react";
 
 export default function PricingCalculator() {
+  const now = typeof window !== 'undefined' ? performance.now().toFixed(0) : 'BUILD';
+
+  console.log(
+    `[${now}ms] 🥑 PricingCalculator render tại:`,
+    typeof window !== "undefined" ? "🌐 BROWSER" : "🖥️  SERVER"
+  );
+
   const [hydrated, setHydrated] = useState(false);
   const [users, setUsers] = useState(10);
   const pricePerUser = 5;
   const total = users * pricePerUser;
 
+  console.log(`[${now}ms] 🥑 State:`, {
+    hydrated,
+    users,
+    total,
+  });
+
   useEffect(() => {
+    const hydrateTime = performance.now().toFixed(0);
+    console.log(`[${hydrateTime}ms] ⚡ useEffect chạy - HYDRATING!`);
     setHydrated(true);
+    console.log(`[${hydrateTime}ms] ✅ Hydration hoàn tất!`);
   }, []);
 
   return (
     <div className="p-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg">
+      <h3 className="text-lg font-semibold mb-4 text-white">
+        Pricing Calculator
+      </h3>
       <span className="absolute top-4 left-4 bg-blue-500 text-white px-2 py-1 rounded text-xs">
         Dynamic:
       </span>
@@ -20,9 +39,7 @@ export default function PricingCalculator() {
           Hydrated ✓
         </span>
       )}
-      <h3 className="text-lg font-semibold mb-4 text-white">
-        Pricing Calculator
-      </h3>
+
       <div className="mb-4">
         <label className="block mb-2">
           <span className="block mb-2 text-sm opacity-90 text-white">

@@ -25,53 +25,23 @@ import LiveClock from '../components/LiveClock.jsx';
     <p>---------------------------------------------------------------------------------------------------------------</p>
 
     <section class="max-w-4xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">Interactive Components</h2>
+      <h2 class="text-2xl font-bold mb-6 text-center">Astro Components</h2>
 
-      <div class="grid gap-6 md:grid-cols-2">
-        <div>
+      <p>- - - - </p>
+
+      <div>
+          <h3>1. Demo client:load directive</h3>
+          <PricingCalculator client:load />    
+      </div>
+
+      <p>- - - - - - - - - - - - - - - - </p>
+ 
+      <div>
+          <h3>2. Demo client:only directive</h3>
           <LiveClock client:only="react" />
-          <p class="text-xs text-center text-gray-500 mt-2">
-            client:only
-          </p>
-        </div>
-
-        <p>- - - - - - - - - - - - - - - - </p>
-
-        <div>
-          <PricingCalculator client:load />
-          <p class="text-xs text-center text-gray-500 mt-2">
-            client:load (hydrate ngay khi load)
-          </p>
-        </div>
       </div>
     </section>
 
     <p>---------------------------------------------------------------------------------------------------------------</p>
 
-    <section class="max-w-4xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">Lợi ích</h2>
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="bg-white rounded-xl shadow-md p-6 text-center">
-          <div class="text-4xl mb-2">🚀</div>
-          <h3 class="font-bold mb-2">Performance</h3>
-          <p class="text-sm text-gray-600">Ít JS hơn</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-md p-6 text-center">
-          <div class="text-4xl mb-2">🎯</div>
-          <h3 class="font-bold mb-2">SEO</h3>
-          <p class="text-sm text-gray-600">HTML có sẵn</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-md p-6 text-center">
-          <div class="text-4xl mb-2">⚡</div>
-          <h3 class="font-bold mb-2">Fast</h3>
-          <p class="text-sm text-gray-600">Tải nhanh</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="text-center py-8 text-gray-500 text-sm">
-      Astro + React Islands
-    </footer>
-
-  </div>
 </Layout>

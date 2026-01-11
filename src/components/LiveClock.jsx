@@ -1,9 +1,20 @@
 import { useEffect, useState } from "react";
 
 export default function LiveClock() {
+  const now = typeof window !== 'undefined' ? performance.now().toFixed(0) : 'BUILD';
+
+  console.log(
+    `[${now}ms] 🕐 LiveClock render tại:`,
+    typeof window !== "undefined" ? "🌐 BROWSER" : "🖥️  SERVER"
+  );
+
   const [time, setTime] = useState(new Date());
 
+  console.log(`[${now}ms] 🕐 Time:`, time.toLocaleTimeString());
+
   useEffect(() => {
+    const loadTime = performance.now().toFixed(0);
+    console.log(`[${loadTime}ms] ⚡ LiveClock mounted - Start timer`);
     const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
