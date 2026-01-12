@@ -6,7 +6,7 @@ export default function IdleDemo() {
   useEffect(() => {
     setLoadTime(performance.now().toFixed(0));
     console.log(
-      `[IdleDemo] ⏳ IdleDemo loaded at ${performance
+      `[client:idle] IdleDemo loaded at ${performance
         .now()
         .toFixed(0)}ms - Loaded khi browser rảnh`
     );

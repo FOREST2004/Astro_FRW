@@ -7,7 +7,7 @@ export default function MediaDemo() {
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
     console.log(
-      `[MediaDemo] 🚀 JS BUNDLE ĐÃ TẢI VỀ! - Screen: ${window.innerWidth}px`
+      `[client:media] JS BUNDLE có tải lên browser - Screen: ${window.innerWidth}px`
     );
   }, []);
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function PricingCalculator() {
   console.log(
-    `[PricingCalculator] 🥑 PricingCalculator render tại:`,
+    `[client:load] PricingCalculator render tại:`,
     typeof window !== "undefined" ? "🌐 BROWSER" : "🖥️  SERVER"
   );
 
@@ -11,13 +11,13 @@ export default function PricingCalculator() {
   const pricePerUser = 5;
   const total = users * pricePerUser;
 
-  console.log(`[PricingCalculator] 🥑 Hydrate:`, {
+  console.log(`[client:load] Hydrate:`, {
     hydrated
   });
 
   useEffect(() => {
     setHydrated(true);
-    console.log(`[PricingCalculator] 🥑 Hydration hoàn tất!`);
+    console.log(`[client:load] Hydration hoàn tất!`);
   }, []);
 
   return (

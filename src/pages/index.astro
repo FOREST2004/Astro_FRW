@@ -14,7 +14,7 @@ const currentYear = new Date().getFullYear();
   <div
     class="font-sans text-gray-800 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-12"
   >
-    <!-- <p>- Current year: <strong>{currentYear}</strong></p> -->
+    
 
     <section class="max-w-4xl mx-auto px-4 mb-16">
       <h2 class="text-2xl font-bold mb-6 text-center">Astro Directives</h2>
@@ -24,28 +24,36 @@ const currentYear = new Date().getFullYear();
         <PricingCalculator client:load />
       </div>
 
-      <p>- - - - - - - - - - - - - - - -</p>
+      <p>
+        ---------------------------------------------------------------------------------------------------------------
+      </p>
 
       <div>
         <h3>2. Demo client:only directive</h3>
         <LiveClock client:only="react" />
       </div>
 
-      <p>- - - - - - - - - - - - - - - -</p>
+      <p>
+        ---------------------------------------------------------------------------------------------------------------
+      </p>
 
       <div>
         <h3>3. Demo client:idle directive</h3>
         <IdleDemo client:idle />
       </div>
 
-      <p>- - - - - - - - - - - - - - - -</p>
+      <p>
+        ---------------------------------------------------------------------------------------------------------------
+      </p>
 
       <div>
         <h3>4. Demo client:media directive</h3>
         <MediaDemo client:media="(max-width: 768px)" />
       </div>
 
-      <p>- - - - - - - - - - - - - - - -</p>
+      <p>
+        ---------------------------------------------------------------------------------------------------------------
+      </p>
       <p>-</p>
       <p>-</p>
       <p>-</p>
@@ -83,14 +91,15 @@ const currentYear = new Date().getFullYear();
     </p>
 
     <section class="text-center mb-16">
-      <p class="text-gray-600 mb-6">Static HTML + React Islands</p>
+      <h3>6. File-based Routing</h3>
       <div class="flex gap-4 justify-center">
         <a
           href="/about"
           class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm"
         >
-          📁 File-based Routing →
+          📁 About →
         </a>
+        <p></p>
         <a
           href="/blog/blog123"
           class="inline-block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-sm"
@@ -103,9 +112,7 @@ const currentYear = new Date().getFullYear();
       ---------------------------------------------------------------------------------------------------------------
     </p>
     <section class="max-w-4xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">
-        Multi-Framework Support
-      </h2>
+      <h3>7. Multi-Framework Support</h3>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <CounterVue client:load />

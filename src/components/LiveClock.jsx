@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export default function LiveClock() {
   console.log(
-    `[LiveClock] 🕐 LiveClock render tại:`,
+    `[client:only] LiveClock render tại:`,
     typeof window !== "undefined" ? "🌐 BROWSER" : "🖥️  SERVER"
   );
 

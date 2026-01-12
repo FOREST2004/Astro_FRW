@@ -6,7 +6,7 @@ export default function VisibleDemo() {
   useEffect(() => {
     setVisible(true);
     console.log(
-      `[VisibleDemo] ✅ VisibleDemo loaded - Đã scroll vào viewport!`
+      `[client:visible] VisibleDemo loaded - Đã scroll vào viewport!`
     );
   }, []);
 
@@ -16,7 +16,7 @@ export default function VisibleDemo() {
       <p className="text-sm mb-2">Load khi scroll vào viewport</p>
       {visible && (
         <p className="text-xs bg-white bg-opacity-20 px-2 py-1 rounded inline-block">
-          ✅ Loaded!
+          - Loaded!
         </p>
       )}
     </div>
