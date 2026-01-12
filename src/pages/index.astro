@@ -5,19 +5,22 @@ import LiveClock from "../components/LiveClock.jsx";
 import IdleDemo from "../components/IdleDemo.jsx";
 import MediaDemo from "../components/MediaDemo.jsx";
 import VisibleDemo from "../components/VisibleDemo.jsx";
+import CounterVue from "../components/CounterVue.vue";
 ---
 
 <Layout>
   <div
     class="font-sans text-gray-800 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-12"
   >
-    <h1 class="text-5xl font-bold mb-4 text-gray-800">Astro Islands Demo</h1>
+    <h1 class="text-5xl font-bold mb-4 text-gray-800 text-center">
+      Astro Islands Demo
+    </h1>
     <p>
       ---------------------------------------------------------------------------------------------------------------
     </p>
 
     <section class="max-w-4xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">Astro Directives</h2>
+      <h2 class="text-2xl font-bold mb-6 text-center">⚡ Astro Directives</h2>
 
       <p>- - - -</p>
 
@@ -99,6 +102,18 @@ import VisibleDemo from "../components/VisibleDemo.jsx";
         >
           📝 Markdown Demo →
         </a>
+      </div>
+    </section>
+    <p>
+      ---------------------------------------------------------------------------------------------------------------
+    </p>
+    <section class="max-w-4xl mx-auto px-4 mb-16">
+      <h2 class="text-2xl font-bold mb-6 text-center">
+        Multi-Framework Support
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <CounterVue client:load />
       </div>
     </section>
   </div>
