@@ -16,7 +16,7 @@ export default function IdleDemo() {
     <div className="p-6 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl shadow-lg text-white">
       <h3 className="text-lg font-bold mb-2">Idle Demo</h3>
       <p className="text-sm mb-2">
-        Load khi browser rảnh (requestIdleCallback)
+        Load khi browser rảnh
       </p>
       {loadTime && (
         <p className="text-xs bg-white bg-opacity-20 px-2 py-1 rounded inline-block">

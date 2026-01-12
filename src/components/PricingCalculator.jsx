@@ -11,15 +11,13 @@ export default function PricingCalculator() {
   const pricePerUser = 5;
   const total = users * pricePerUser;
 
-  console.log(`[PricingCalculator] 🥑 State:`, {
-    hydrated,
-    users,
-    total,
+  console.log(`[PricingCalculator] 🥑 Hydrate:`, {
+    hydrated
   });
 
   useEffect(() => {
     setHydrated(true);
-    console.log(`[PricingCalculator] ✅ Hydration hoàn tất!`);
+    console.log(`[PricingCalculator] 🥑 Hydration hoàn tất!`);
   }, []);
 
   return (
