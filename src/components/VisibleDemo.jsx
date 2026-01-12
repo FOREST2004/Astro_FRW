@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function VisibleDemo() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     setVisible(true);
-    console.log(`[VisibleDemo] ✅ VisibleDemo loaded - Đã scroll vào viewport!`);
+    console.log(
+      `[VisibleDemo] ✅ VisibleDemo loaded - Đã scroll vào viewport!`
+    );
   }, []);
 
   return (
