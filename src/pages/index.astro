@@ -6,23 +6,18 @@ import IdleDemo from "../components/IdleDemo.jsx";
 import MediaDemo from "../components/MediaDemo.jsx";
 import VisibleDemo from "../components/VisibleDemo.jsx";
 import CounterVue from "../components/CounterVue.vue";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <Layout>
   <div
     class="font-sans text-gray-800 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen py-12"
   >
-    <h1 class="text-5xl font-bold mb-4 text-gray-800 text-center">
-      Astro Islands Demo
-    </h1>
-    <p>
-      ---------------------------------------------------------------------------------------------------------------
-    </p>
+    <!-- <p>- Current year: <strong>{currentYear}</strong></p> -->
 
     <section class="max-w-4xl mx-auto px-4 mb-16">
-      <h2 class="text-2xl font-bold mb-6 text-center">⚡ Astro Directives</h2>
-
-      <p>- - - -</p>
+      <h2 class="text-2xl font-bold mb-6 text-center">Astro Directives</h2>
 
       <div>
         <h3>1. Demo client:load directive</h3>
